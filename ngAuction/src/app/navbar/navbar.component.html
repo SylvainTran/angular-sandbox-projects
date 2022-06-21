@@ -1,15 +1,26 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" [routerLink]="['/']">ngAuction</a>
-    <button class="navbar-toggler" type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle Navigation"
-    >
-    <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-    
-    <p>navbar works!</p>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li ngbDropdown class="nav-item">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>Services</a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown">
+                <button ngbDropdownItem>Find products</button>
+                <button ngbDropdownItem>Place order</button>
+                <div class="dropdown-divider"></div>
+                  <button ngbDropdownItem>Pay</button>
+              </div>
+            </li>
+        </ul>
+    </div>
 </nav>
