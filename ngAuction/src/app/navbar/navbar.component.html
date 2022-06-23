@@ -7,8 +7,12 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#" [routerLink]="['/']">Home</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" [routerLink]="['/products', 123]" [queryParams]="{color: 'red'}">Product Details</a>
+            </li>
+            <li class="nav-item" role="button" (click)="navigateToProductDetail(456)">Product Details v2</li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>

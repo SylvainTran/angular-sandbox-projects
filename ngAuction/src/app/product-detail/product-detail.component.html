@@ -1,1 +1,10 @@
-<p>product-detail works!</p>
+<h1>Product Details ID: {{productID}}</h1>
+<h2>Product color params: {{productColorParam}}</h2>
+<ul>
+    <!-- <li><a [routerLink]="['./']">Product Details</a></li> -->
+    <li><a [routerLink]="['./productDescription']">Product Description</a></li>
+    <li><a [routerLink]="['./seller/', 1]">Seller Info</a></li>
+    <li><a [routerLink]="['./seller/', 10]">Seller Info</a></li>
+    <li><a [routerLink]="['./seller/', 100]">Seller Info</a></li>
+</ul>
+<router-outlet></router-outlet>

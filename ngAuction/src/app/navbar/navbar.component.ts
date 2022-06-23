@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'nga-navbar',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public isMenuCollapsed = true;
+  isMenuCollapsed = true;
 
-  constructor() {}
+  constructor(private _router : Router) {
+  }
 
   ngOnInit(): void {
   }
 
+  navigateToProductDetail(id : number) {
+    this._router.navigate([`/products/${id}`], {queryParams: {color: 'blue'}});
+  }
 }
