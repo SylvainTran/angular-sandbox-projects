@@ -21,6 +21,10 @@ export class ProductService {
   getProducts(): Product[] {
     return products.map(p => new Product(p.id, p.title, p.price, p.rating, p.description, p.categories));
   }
+
+  getProductByID(productID: number) : Product | undefined {
+    return products.find(p => p.id === productID);
+  }
 }
 
 const products = [

@@ -1,10 +1,20 @@
-<h1>Product Details ID: {{productID}}</h1>
-<h2>Product color params: {{productColorParam}}</h2>
-<ul>
-    <!-- <li><a [routerLink]="['./']">Product Details</a></li> -->
-    <li><a [routerLink]="['./productDescription']">Product Description</a></li>
-    <li><a [routerLink]="['./seller/', 1]">Seller Info</a></li>
-    <li><a [routerLink]="['./seller/', 10]">Seller Info</a></li>
-    <li><a [routerLink]="['./seller/', 100]">Seller Info</a></li>
-</ul>
-<router-outlet></router-outlet>
+<div class="thumbnail">
+    <img src="https://picsum.photos/800/320?random=1">
+    <div>
+        <h4 class="float-right">{{product.price | currency }} </h4>
+        <h4>{{product.title}}</h4>
+        <p>{{product.description}}</p>
+    </div>
+    <div class="ratings">
+        <p><nga-stars [rating]="product.rating"></nga-stars></p>
+    </div>
+    <!-- <ul> -->
+        <!-- <li><a [routerLink]="['./']">Product Details</a></li> -->
+        <!-- <li><a [routerLink]="['./productDescription']">Product Description</a></li>
+        <li><a [routerLink]="['./seller/', 1]">Seller Info</a></li>
+        <li><a [routerLink]="['./seller/', 10]">Seller Info</a></li>
+        <li><a [routerLink]="['./seller/', 100]">Seller Info</a></li>
+    </ul> -->
+</div>
+
+<!-- <router-outlet></router-outlet> -->

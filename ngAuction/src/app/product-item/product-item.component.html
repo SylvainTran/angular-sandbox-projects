@@ -5,5 +5,7 @@
         <h4><a [routerLink]="['/products', product.id]">{{product.title}}</a></h4>
         <p>{{product.description}}</p>
     </div>
-    <!--TODO: Ratings -->
+    <div class="ratings">
+        <nga-stars [rating]="product.rating"></nga-stars>
+    </div>
 </div>

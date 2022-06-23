@@ -9,7 +9,7 @@ import { SellerInfoComponent } from './seller-info/seller-info.component';
 
 const routes: Routes = [
   {
-    path: 'products/:id',
+    path: 'products/:productID',
     component: ProductDetailComponent,
     children: [
       {
