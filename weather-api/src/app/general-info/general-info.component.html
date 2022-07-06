@@ -1,0 +1,10 @@
+<h1>Enter a city's name:</h1>
+<form>
+    <input type="text" placeholder="Enter a city's name" [formControl]="cityInput" />
+</form>
+<h1>City: {{ city }}</h1>
+<h2>Weather: {{ weather }}</h2>
+<h3>Condition: {{ iconText }} </h3>
+<img src={{icon}} alt="condition icon" />
+<h4>Date: {{ date }} </h4>
+<br>
